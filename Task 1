@@ -1,1 +1,28 @@
+Scenario 1: Perform a basic search for “Prowly Media Monitoring” on bing.com
+Given User is on the bing.com homepage
+When user enters “Prowly Media Monitoring” in the search bar
+And user clicks on the search button
+Then the search results page will be displayed
+And the results will include relevant links related to “Prowly Media Monitoring”.
 
+Scenario 2: Filter search results by the “All” content category
+Given User is on the search results page for “Prowly Media Monitoring”
+When user selects the “All” content category filter
+Then the displayed results will only include diverse content types such as web pages, images, videos, news, etc.
+
+Scenario 3: Filter search results by the “Video” content category
+Given User is on the search results page for “Prowly Media Monitoring”
+When user selects the “Video” content category filter
+Then the displayed results will only include video content related to “Prowly Media Monitoring”.
+
+Scenario 4: Perform a search with advanced search operators
+Given User is on the bing.com homepage
+When user enters “Prowly Media Monitoring” AND “tools” NOT “software” in the search bar
+And clicks on the search button
+Then the search results page will be displayed
+And the results will include links related to “Prowly Media Monitoring” with a focus on tools, excluding software.
+
+Scenario 5: Perform an empty search on bing.com
+Given User is on the bing.com homepage
+When user clicks on the search button without entering any text in the search bar
+Then nothing happens and user stays on the page.
